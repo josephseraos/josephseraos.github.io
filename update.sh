@@ -13,7 +13,7 @@ rm -r static
 
 echo "Buscando novos arquivos"
 
-cp ../sistema/build/* ./
+cp -r ../sistema/build/* ./
 
 git add .
 git commit -m 'Atualização automática via update.sh'
