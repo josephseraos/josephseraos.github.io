@@ -1,7 +1,9 @@
 #!/bin/bash
 
 git checkout master
+shopt -s extglob
 rm -rf -- !("."|".."|".git"|"update.sh"|"build")
+shopt -u extglob
 mv build/* ./
 rmdir build
 git add .
