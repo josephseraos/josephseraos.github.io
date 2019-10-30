@@ -22,27 +22,16 @@ if npm run build
 then
     if git checkout master
     then
-        shopt
         shopt -s extglob
-        shopt
+        rm -rf -- !("."|".."|".git"|"deploy.sh"|"build") 
+        shopt -u extglob
+        mv build/* ./
+        rmdir build
+        git add .
+        git commit -m 'Site atualizado usando update.sh'
+        git push
+        echo "https://josephseraos.github.io"
         git checkout source
-        exit 0
-        if rm -rf -- !("."|".."|".git"|"deploy.sh"|"build")
-        then
-            shopt -u extglob
-            mv build/* ./
-            rmdir build
-            git add .
-            git commit -m 'Site atualizado usando update.sh'
-            git push
-            echo "https://josephseraos.github.io"
-            git checkout source
-        else
-            shopt -u extglob
-            echo "Fail to remove files"
-            git checkout source
-            exit 1
-        fi
     else
         echo 'Attention!!! Something went wrong!!!'
         git checkout source
