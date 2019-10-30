@@ -22,7 +22,11 @@ if npm run build
 then
     if git checkout master
     then
+        shopt
         shopt -s extglob
+        shopt
+        git checkout source
+        exit 0
         if rm -rf -- !("."|".."|".git"|"deploy.sh"|"build")
         then
             shopt -u extglob
