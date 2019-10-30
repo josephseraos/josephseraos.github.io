@@ -1,0 +1,40 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Behavior
+$enable-shadows: true;
+$enable-gradients: true;
+
+// Adding new colors to the theme
+
+$alpha: #002244;
+$beta: #004488;
+
+$theme-colors: (
+    alpha: $alpha,
+    beta: $beta
+);
+
+// Changing anchor color
+$link-color: $secondary;
+
+// Changing code color
+$code-color: $green;
+
+
+// Customized classes
+
+// Draw a line through the text
+.text-strikethrough {
+    text-decoration: line-through;
+}
+
+// Make text italic, red and with a line through
+.text-deleted, .text-removed {
+    text-decoration: line-through;
+    color: $danger;
+    font-style: italic;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
