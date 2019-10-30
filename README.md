@@ -1,3 +1,18 @@
+Deploy
+
+### `npm run build`
+### `git checkout master`
+### `rm -rf -- !(build)`
+### `mv build/* ./`
+### `rmdir build`
+### `git add .`
+### `git commit -m 'Atualização'`
+### `git push`
+### `git checkout source`
+### `npm i`
+
+<hr />
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
