@@ -24,13 +24,13 @@ then
     then
         shopt -s extglob
         rm -rf -- !("."|".."|".git"|"deploy.sh"|"build") 
-        shopt -u extglob
         mv build/* ./
         rmdir build
         git add .
         git commit -m 'Site atualizado usando update.sh'
         git push
         echo "https://josephseraos.github.io"
+        shopt -u extglob
         git checkout source
     else
         echo 'Attention!!! Something went wrong!!!'
