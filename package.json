@@ -1,5 +1,6 @@
 {
-  "name": "sistema",
+  "homepage": "https://josephseraos.github.io/site/",
+  "name": "site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
