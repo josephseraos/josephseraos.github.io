@@ -1,14 +1,20 @@
-import React from 'react'
-import { Container, Spinner } from 'react-bootstrap'
+import React, { Fragment } from 'react'
+import { Container, Spinner, Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
 
 const App = () => {
     return (
-        <Container fluid className="text-center m-4">
-            <h4>Construindo...</h4>
-            <Spinner animation="border" role="status" className="m-4">
-                <span className="sr-only">Loading...</span>
-            </Spinner>
-        </Container>
+        <Fragment>
+            <Navbar bg="light" expand="lg">
+                <Navbar.Brand href="#home">Joseph S. Alcântara</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#link">Link</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+        </Fragment>
     )
 }
 
